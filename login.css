@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+
+  --bg-color: #f0ecf0;
+  --color-text: #333;
+  --error-text: #EF3E39;
+  --white: #fff;
+  --border-color: #d3d3d3;
+  --default-blue: #00AEEF;
+  --button-hover: #0089bc;
+  --bg-button-disabled: #0000001c;
+  --color-label: #0000008a;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-color);
+  display: grid;
+  place-items: center;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+.containerLogin {
+  width: 40rem;
+  height: 34.57rem;
+  background-color: var(--white);
+  transition: 0.5s ease;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 15%), 0 1px 2px 0 rgb(0 0 0 / 5%);
+}
+
+.login {
+  padding: 4rem 6rem 6rem;
+}
+
+.logo img {
+  max-width: 12rem;
+}
+
+.inputData {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  margin-top: 0.5rem;
+}
+
+.enterInput {
+  position: relative;
+  padding-top: 1.3rem;
+}
+
+.inputData label {
+  color: var(--color-label);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 0.5rem;
+  transition: .3s ease;
+}
+
+.inputData input {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--border-color);
+  font-size: 1.6rem;
+  transition: .3s ease;
+}
+
+input:focus ~ label,
+.enterInput.completed label {
+  bottom: 40%;
+  color: var(--default-blue);
+}
+
+input:focus {
+  border-color: var(--default-blue);
+}
+
+.enterInput.completed input {
+  border-color: var(--border-color);
+}
+
+.inputData .errorCredencials {
+  display: none;
+}
+
+.inputData .errorCredencials.enable {
+  display: block;
+  font-size: 1.2rem;
+  color: var(--error-text);
+}
+
+.footerForm {
+  margin-top: 4.15rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerForm a {
+  color: var(--default-blue);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 1;
+  outline: none;
+}
+
+.footerForm button {
+  border: none;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--bg-button-disabled);
+  text-transform: uppercase;
+  cursor: not-allowed;
+  transition: .5s;
+  transform: scale(1.1);
+  box-shadow: 0px 1px 5px rgb(0 0 0 / 20%), 0px 2px 2px rgb(0 0 0 / 11%), 0px 3px 1px rgb(0 0 0 / 11%);
+}
+
+.footerForm button#button.enable {
+  cursor: pointer;
+  background-color: var(--default-blue);
+  color: var(--white);
+}
+
+.footerForm button:hover#button.enable {
+  background-color: var(--button-hover);
+}
+
+
+@media (max-width: 768px) {
+  body {
+    background-color: var(--white);
+  }
+
+  .containerLogin {
+    box-shadow: none;
+  }
+}

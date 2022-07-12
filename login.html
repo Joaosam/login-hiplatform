@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./asset/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <title>Login - Módulo Supervisor</title>
+  </head>
+  <body>
+    <div class="containerLogin">
+      <div class="login">
+        <div class="logo">
+          <img src="./asset/hi-platform.svg" alt="Logo Hi platform" />
+        </div>
+        <div class="form">
+          <form>
+            <div class="inputData">
+              <div id="userInput" class="enterInput">
+                <input
+                  type="text"
+                  name="user"
+                  id="user"
+                  autofocus
+                  onkeyup="contentInput()"
+                />
+                <label for="user">Usuário / E-mail </label>
+              </div>
+              <div id="passwordInput" class="enterInput">
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  onkeyup="contentInput()"
+                />
+                <label for="password">Senha</label>
+              </div>
+              <p class="errorCredencials"></p>
+            </div>
+          </form>
+          <div class="footerForm">
+            <div class="forgotPassword">
+              <a href="./forgot-password.html">esqueceu sua senha?</a>
+            </div>
+            <div class="enterLogin">
+              <button id="button" disabled onclick="login()">Entrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
