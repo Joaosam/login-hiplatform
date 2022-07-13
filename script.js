@@ -45,7 +45,7 @@ function login() {
   const joinArray = arrayDataUser.join(':')
   const valueEncoded = btoa(`${joinArray}`)
 
-  function validadeCredentials() {
+  function validateCredentials() {
     const urlApi =
       'https://run.mocky.io/v3/675b34d2-b51e-4a76-8520-85a6102e306c'
 
@@ -63,7 +63,17 @@ function login() {
 
           errorCredencials.classList.add('enable')
           if (verifyValueEncoded) {
-            errorCredencials.innerHTML = `Bem vindo <strong>${userExists.name}</strong>`
+            function displayName() {
+              console.log('entrou')
+              window.location.href = './welcome/welcome.html'
+
+              const onlyDescriptionWelcome = document.querySelector(
+                '.onlyDescriptionWelcome'
+              )
+
+              onlyDescriptionWelcome.innerHTML = `Bem vindo ${userExists.name}!`
+            }
+            displayName()
           } else {
             errorCredencials.innerHTML = 'Credenciais informadas inválidas'
           }
@@ -72,7 +82,7 @@ function login() {
         }
       })
   }
-  validadeCredentials()
+  validateCredentials()
 }
 
 /* ========== FORGOT PASSWORD ========== */
