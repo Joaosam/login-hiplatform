@@ -81,7 +81,8 @@ input:focus ~ label,
   color: var(--default-blue);
 }
 
-input:focus {
+input:focus,
+.enterInput.completed input:focus {
   border-color: var(--default-blue);
 }
 
