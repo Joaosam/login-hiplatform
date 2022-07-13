@@ -63,17 +63,13 @@ function login() {
 
           errorCredencials.classList.add('enable')
           if (verifyValueEncoded) {
-            function displayName() {
-              console.log('entrou')
-              window.location.href = './welcome/welcome.html'
+            window.location.href = './welcome/welcome.html'
 
-              const onlyDescriptionWelcome = document.querySelector(
-                '.onlyDescriptionWelcome'
-              )
+            const onlyDescriptionWelcome = document.querySelector(
+              '.onlyDescriptionWelcome'
+            )
 
-              onlyDescriptionWelcome.innerHTML = `Bem vindo ${userExists.name}!`
-            }
-            displayName()
+            onlyDescriptionWelcome.innerHTML = `Bem vindo ${userExists.name}!`
           } else {
             errorCredencials.innerHTML = 'Credenciais informadas inválidas'
           }
