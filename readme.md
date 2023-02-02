@@ -1,5 +1,5 @@
 <h1 align="center">
-  Login Hi Platform 💻
+  Login Olá Plataforma 💻
 </h1>
 
 <p align="center">
